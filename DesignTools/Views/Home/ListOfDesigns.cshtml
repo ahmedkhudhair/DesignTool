@@ -1,0 +1,20 @@
+﻿
+@model List<DesignTools.Models.Design>
+@{
+    ViewBag.Title = "ListOfDesigns";
+}
+
+<h2>ListOfDesigns</h2>
+<div class="row">
+    @foreach (var design in Model)
+    {
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">@Html.Raw(design.page_name)</h3>
+                </div>
+                <div class="panel-body">
+                    @Html.Raw(design.html_design)
+                </div>
+        </div>
+    }
+</div>
